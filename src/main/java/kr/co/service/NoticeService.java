@@ -6,7 +6,7 @@ import kr.co.domain.NoticeVO;
 
 public interface NoticeService {
 	
-public List<NoticeVO> getList();
+	public List<NoticeVO> getList();
 	
 	public void register(NoticeVO notice);
 	
