@@ -1,5 +1,9 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page session="false" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,22 +43,29 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: flex-end">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-    </div>
+			
+				<c:choose>
+					<c:when test="${sessionScope.user_id != null}">
+						<ul class="navbar-nav">
+							<li class="nav-item"><a class="nav-link active"
+								aria-current="page" href="#">My Page</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">LOG OUT</a>
+							</li>
+						</ul>
+					</c:when>
+					<c:otherwise>
+						<ul class="navbar-nav">
+							<li class="nav-item"><a class="nav-link active"
+								aria-current="page" href="/user/login">LOGIN</a></li>
+							<li class="nav-item"><a class="nav-link" href="user/join">JOIN</a>
+							</li>
+						</ul>
+					</c:otherwise>
+				</c:choose>
+			</div>
+    
   </div>
 </nav>
 
@@ -70,11 +81,16 @@
 			<div class="col-lg-2" style="margin:">
 
 				<h3 class="my-4">Loopy Girls' Bookstore</h3>
+				
 				<div class="list-group">
-					<a href="#" class="list-group-item" style="color: hotpink;">Category
-						1</a> <a href="#" class="list-group-item" style="color: hotpink;">Category
-						2</a> <a href="/notice/list" class="list-group-item" style="color: hotpink;">Notice
-						3</a>
+					<a href="/book/list?book_kategorie=all" class="list-group-item" style="color: hotpink;">도서목록</a>
+					<a href="/book/list?book_kategorie=IT/컴퓨터" class="list-group-item" style="color: hotpink;">- IT</a>
+					<a href="/book/list?book_kategorie=외국어" class="list-group-item" style="color: hotpink;">- 외국어</a>
+					<a href="/book/list?book_kategorie=소설" class="list-group-item" style="color: hotpink;">- 소설</a>
+					<a href="/book/list?book_kategorie=여행" class="list-group-item" style="color: hotpink;">- 여행</a>
+					<a href="/book/list?book_kategorie=요리" class="list-group-item" style="color: hotpink;">- 요리</a>
+					<a href="/book/list?book_kategorie=어린이" class="list-group-item" style="color: hotpink;">- 어린이</a>
+					<a href="/notice/list" class="list-group-item" style="color: hotpink;">공지사항</a>
 				</div>
 
 			</div>
@@ -82,4 +98,3 @@
 			<div class="col-lg-10">
 
 				<div class="row">
-

@@ -15,8 +15,8 @@ public class BookServiceImp implements BookService {
 	private final BookMapper bookMapper;
 
 	@Override
-	public List<BookVO> getList() {
-		return bookMapper.getList();
+	public List<BookVO> getList(String book_kategorie) {
+		return bookMapper.getList(book_kategorie);
 	}
 
 	@Override
@@ -27,7 +27,7 @@ public class BookServiceImp implements BookService {
 
 	@Override
 	public BookVO get(int book_id) {
-		return null;
+		return bookMapper.read(book_id);
 	}
 
 	@Override

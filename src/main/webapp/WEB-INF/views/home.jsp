@@ -48,7 +48,7 @@
               <a href="#"><img class="card-img-top" src= "${bookList.fileName}" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">${bookList.book_title }</a>
+                  <a href="/book/get?book_id=${bookList.book_id }">${bookList.book_title }</a>
                 </h4>
                 <h5> <fmt:setLocale value="ko_KR"/><fmt:formatNumber value="${bookList.book_price }" type="currency"></fmt:formatNumber></h5>
               </div>

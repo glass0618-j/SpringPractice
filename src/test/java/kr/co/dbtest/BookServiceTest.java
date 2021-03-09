@@ -23,7 +23,7 @@ public class BookServiceTest {
 	@Test
 	public void getListTest() {
 		log.info("getListTest..............");
-		List<BookVO> vo = bs.getList();
+		List<BookVO> vo = bs.getList("");
 		
 		for (BookVO bookVO : vo) {
 			log.info(bookVO);

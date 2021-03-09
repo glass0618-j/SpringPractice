@@ -23,7 +23,7 @@ public class BookMapperTest {
 	@Test
 	public void getListTest() {
 		log.info("getListTest................");
-		List<BookVO> vo = bm.getList();
+		List<BookVO> vo = bm.getList("");
 		
 		for (BookVO bookVO : vo) {
 			log.info(bookVO);

@@ -6,7 +6,7 @@ import kr.co.domain.BookVO;
 
 public interface BookMapper {
 	
-	public List<BookVO> getList();
+	public List<BookVO> getList(String book_kategorie);
 	
 	public void insert(BookVO book);
 	
