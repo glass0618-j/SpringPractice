@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import kr.co.domain.UserVO;
-import kr.co.mapper.NoticeMapper;
 import kr.co.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
 
@@ -13,21 +12,27 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class UserServiceImp implements UserService{
 	
-	private final UserMapper userMapper;
+	final private UserMapper usermapper;
 
 	@Override
 	public List<UserVO> getList() {
-		return userMapper.getList();
+		return usermapper.getList();
 	}
 
 	@Override
 	public void join(UserVO user) {
-		userMapper.insert(user);
+		usermapper.insert(user);
+
 	}
 
 	@Override
 	public boolean idcheck(String user_id) {
-		return userMapper.idcheck(user_id) == 0;
+		return usermapper.idcheck(user_id) == 0 ;
+	}
+
+	@Override
+	public UserVO login(UserVO User) {
+		return usermapper.read(User);
 	}
 
 }

@@ -3,7 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page session="false" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +13,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<title>Tables - SB Admin</title>
+<title>Loppy Books</title>
 <link href="/resources/css/styles.css" rel="stylesheet" />
 <link
 	href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"
@@ -51,7 +50,7 @@
 						<ul class="navbar-nav">
 							<li class="nav-item"><a class="nav-link active"
 								aria-current="page" href="#">My Page</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">LOG OUT</a>
+							<li class="nav-item"><a class="nav-link" href="/user/logout">LOG OUT</a>
 							</li>
 						</ul>
 					</c:when>
@@ -59,7 +58,7 @@
 						<ul class="navbar-nav">
 							<li class="nav-item"><a class="nav-link active"
 								aria-current="page" href="/user/login">LOGIN</a></li>
-							<li class="nav-item"><a class="nav-link" href="user/join">JOIN</a>
+							<li class="nav-item"><a class="nav-link" href="/user/join">JOIN</a>
 							</li>
 						</ul>
 					</c:otherwise>

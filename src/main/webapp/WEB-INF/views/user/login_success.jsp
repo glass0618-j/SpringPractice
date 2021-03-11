@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 
 <script>
-alert("Join Success!");
+alert("Login Success!");
 location.href = "/";
 </script> 
 

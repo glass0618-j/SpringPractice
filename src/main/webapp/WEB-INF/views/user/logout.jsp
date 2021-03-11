@@ -4,14 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-
 <script>
-alert("Join Success!");
-location.href = "/";
-</script> 
-
+alert("Logout Success!")
+location.href="/";
+</script>
 </head>
 <body>
+
 </body>
+
 </html>

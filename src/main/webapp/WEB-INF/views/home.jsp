@@ -1,6 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@ page session="false"%>
 <%@ include file="includes/h2.jsp"%>
 
 <main>
@@ -43,7 +42,8 @@
 		<div class="row" style="justify-content: space-around ; margin: 1px"  >
         
         <c:forEach items="${list }" var="bookList">
-		<div class="col-lg-3 col-md-5 mb-3" style="text-align: center ; padding: 0 5px">
+		<div class="col-lg-3 col-md-5 mb-3" 
+				style="text-align: center ; padding: 0 5px">
             <div class="card h-100">
               <a href="#"><img class="card-img-top" src= "${bookList.fileName}" alt=""></a>
               <div class="card-body">

@@ -12,9 +12,9 @@ public interface UserService {
 	
 	public boolean idcheck(String user_id);
 	
-//	public void insertSelectKey(BookVO book);
+//	public void joinSelectKey(UserVO user);
 	
-//	public BookVO read(int user_number);
+	public UserVO login(UserVO User);
 //	
 //	public int update(UserVO user);
 //	

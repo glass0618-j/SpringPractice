@@ -11,6 +11,10 @@
 		</if>
 		book_id>=0
 	</select>
+	
+	<select id="kategorie" resultType="kr.co.domain.BookVO">
+		select book_kategorie from tbl_book
+	</select>
 
 	<insert id="insert">
 		insert into tbl_book (book_id, book_title,
