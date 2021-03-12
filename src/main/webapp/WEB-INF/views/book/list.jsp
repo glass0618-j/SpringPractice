@@ -5,8 +5,25 @@
 
 <%@ include file="../includes/h2.jsp"%>
 <main>
+<br>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			
+			
+			<h2>${nothing != "all" ? list[0].book_kategorie : "전체도서"}</h2>
+			
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav"></div>
+		</div>
+	</nav>
+	<br>
+
 <div class="row" style="justify-content: space-around ; margin: 1px"  >
-        
         <c:forEach items="${list }" var="bookList">
 		<div class="col-lg-3 col-md-5 mb-3" style="text-align: center ; padding: 0 5px">
             <div class="card h-100">

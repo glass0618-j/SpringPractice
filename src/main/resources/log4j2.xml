@@ -7,7 +7,7 @@
   </Appenders>
   <Loggers>
     <Logger name="kr.co.loopy" level="info"/>
-    <Logger name="kr.co.roottest" level="info"/>
+    <Logger name="kr.co.*" level="info"/>
     <Logger name="kr.co.test" level="info"/>
     <Logger name="kr.co.controller" level="info"/>
     <Logger name="org.springframework.core" level="info"/>
